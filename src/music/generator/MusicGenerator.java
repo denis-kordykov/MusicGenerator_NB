@@ -51,26 +51,21 @@ public class MusicGenerator {
         Hat.start();
         Dop.start();
         Bass.start();
-      
+        Piano.start();
+        
         System.out.println("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)");
 
         Drums.setPriority(5);
         Share.setPriority(3);
         Hat.setPriority(2);
         Dop.setPriority(1);
-        
         Bass.setPriority(5);
         Piano.setPriority(1);
         Guitar.setPriority(1);
-               
-        a =0 +(int)(Math.random() *((9-0)+1));
-        a1 = 0 +(int)(Math.random() *((9-0)+1));
-        a2 = 0 +(int)(Math.random() *((9-0)+1));
+              
+       
         
-        if(a==a1||a==a2){
-       Guitar.start();
-        }else
-        Piano.start(); 
+         
         // TODO code application logic here
     }
     
