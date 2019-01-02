@@ -28,7 +28,7 @@ public class Piano  {
             for(int p = 0;p<=pPiano.udari;p++)
             {
             pPiano.notei = pPiano.note[pPiano.a +(int)(Math.random() *((pPiano.bn-pPiano.a)+1))];     
-            channels[6].noteOn(pPiano.notei, 50);
+            channels[6].noteOn(pPiano.notei, 60);
             Thread.sleep(pPiano.rytmi); // in milliseconds
             channels[6].noteOff(pPiano.notei);           
             
