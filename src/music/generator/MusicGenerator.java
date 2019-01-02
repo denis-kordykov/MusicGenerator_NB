@@ -11,7 +11,7 @@ import javax.sound.midi.*;
 import javax.sound.midi.MidiChannel;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Synthesizer;
-//kordyukov
+
 /**
  *
  * @author Δενθρ
