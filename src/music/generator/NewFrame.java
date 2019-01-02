@@ -5,7 +5,7 @@
  */
 package music.generator;
 import javax.swing.*;
-
+//kordyukov
 /**
  *
  * @author Δενθρ

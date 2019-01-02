@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package music.generator;
-
+//kordyukov
 import javax.sound.midi.MidiChannel;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Synthesizer;
