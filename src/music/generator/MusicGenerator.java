@@ -11,6 +11,7 @@ import javax.sound.midi.*;
 import javax.sound.midi.MidiChannel;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Synthesizer;
+import javax.swing.*;
 
 /**
  *
@@ -22,9 +23,9 @@ public class MusicGenerator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       int a,a1,a2; 
         
-        new NewFrame();
+        new NewFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)",640,480);
+                        
         ThreadP potok = new ThreadP();
         Thread Drums = new Thread(potok);
 

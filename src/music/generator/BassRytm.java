@@ -18,7 +18,7 @@ public class BassRytm {
      int povti = povt[a +(int)(Math.random() *((b-a)+1))];
      int[] rythm = {500,1000,250,2000};
      int note[] = {24,26,28,29,31,33,35,36,38,40,41,43,45,47};//
-     int notei; // = note[a1 +(int)(Math.random() *((bn-7)+1))];;
+     static int notei; // = note[a1 +(int)(Math.random() *((bn-7)+1))];;
      int i,inter;
      int[] interval = {4,5};
     
