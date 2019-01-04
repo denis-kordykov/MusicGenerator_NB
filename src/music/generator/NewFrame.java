@@ -44,7 +44,7 @@ import java.awt.event.*;
         JComboBox comboBox = new JComboBox(items);
         
         JFrame MyFrame = new JFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)");
-        MyFrame.setBounds(x, y, 500, 350);
+        MyFrame.setBounds(x, y, 500, 320);
         MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ImageIcon icn = new ImageIcon("C:/Git repos/Music-Generator/dist/note.jpg");
         JLabel lbl = new JLabel(text,icn,JLabel.CENTER);
