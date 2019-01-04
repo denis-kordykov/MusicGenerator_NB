@@ -46,7 +46,7 @@ public class Bass {
                     channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
                      if (pBass.notei+Tonalnost.t == 31+Tonalnost.t||pBass.notei+Tonalnost.t == 43+Tonalnost.t)
                         channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
-            channels[7].noteOff(pBass.notei+24+4+Tonalnost.t);
+            channels[7].noteOff(pBass.notei+12+4+Tonalnost.t);
             }
             else{
                 channels[7].noteOn(pBass.notei+12+3+Tonalnost.t, 60);
