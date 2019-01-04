@@ -40,7 +40,7 @@ public class Bass {
             //2-я нота
             if (pBass.inter == 4)
             {
-            if (pBass.notei+Tonalnost.t == 12+Tonalnost.t||pBass.notei+Tonalnost.t == 36+Tonalnost.t){
+            if (pBass.notei+Tonalnost.t == 24+Tonalnost.t||pBass.notei+Tonalnost.t == 36+Tonalnost.t){
                 channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
                 if(pBass.notei+Tonalnost.t == 29+Tonalnost.t||pBass.notei+Tonalnost.t == 41+Tonalnost.t)
                     channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
