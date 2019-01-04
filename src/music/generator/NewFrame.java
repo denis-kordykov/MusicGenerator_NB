@@ -12,9 +12,8 @@ import java.awt.event.*;
  *
  * @author Денис
  */
- class NewFrame implements ActionListener {
-     
-    
+ public class NewFrame implements ActionListener {
+ 
     NewFrame(String text,int x,int y){
           String[] items = {
     "До(С)",
@@ -52,24 +51,58 @@ import java.awt.event.*;
         lbl.setBounds(10, 10, 225, 214);
         JButton btn = new JButton("Закрыть");
         btn.setBounds(10, 240, 180, 30);
+        comboBox.setBounds(300, 10, 150, 30);
         btn.addActionListener(this);
         MyFrame.setLayout(null);
         MyFrame.setVisible(true);
         MyFrame.add(lbl);
         MyFrame.add(btn);
         MyFrame.add(comboBox);
-        //comboBox.addActionListener(this);
-        comboBox.setBounds(300, 10, 150, 30);
+        
         comboBox.setVisible(true);
         MyFrame.setVisible(true);
         
-    }
-         
+        comboBox.addActionListener(new ActionListener(){
+         public void actionPerformed(ActionEvent event) { 
+                     String msg = (String)comboBox.getSelectedItem();
+                     switch(msg){
+                     case "До#(С#)":
+                         Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+1;
+                        break;
+                      case "До(С)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+0;                   
+                        break;
+                      case "Ре(D)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+2;                   
+                        break;  
+                      case "Ре#(D#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+3;                   
+                        break;
+                       case "Ми(E)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+4;                   
+                        break; 
+                        case "Фа(F)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+5;                   
+                        break; 
+                     }
+    }    
+        });
+    }  
     
         public void actionPerformed(ActionEvent AEobj){
-  
+            
             System.exit(0);
            
-        }}
-  
-    
+        }
+        
+
+ 
+ }
+ 
+

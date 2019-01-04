@@ -33,55 +33,55 @@ public class Bass {
             for(int p = 0;p<=pBass.povti;p++)
             {
             
-            channels[6].noteOn(pBass.notei, 80);
+            channels[6].noteOn(pBass.notei+Tonalnost.t, 80);
                        
-            channels[7].noteOn(pBass.notei+12, 20);
+            channels[7].noteOn(pBass.notei+24+Tonalnost.t, 50);
             
             //2-я нота
             if (pBass.inter == 4)
             {
-            if (pBass.notei == 24||pBass.notei == 36){
-                channels[7].noteOn(pBass.notei+24+4, 20);
-                if(pBass.notei == 29||pBass.notei == 41)
-                    channels[7].noteOn(pBass.notei+24+4, 20);
-                     if (pBass.notei == 31||pBass.notei == 43)
-                        channels[7].noteOn(pBass.notei+24+4, 20);
-            channels[7].noteOff(pBass.notei+24+4);
+            if (pBass.notei+Tonalnost.t == 24+Tonalnost.t||pBass.notei+Tonalnost.t == 36+Tonalnost.t){
+                channels[7].noteOn(pBass.notei+24+4+Tonalnost.t, 50);
+                if(pBass.notei+Tonalnost.t == 29+Tonalnost.t||pBass.notei+Tonalnost.t == 41+Tonalnost.t)
+                    channels[7].noteOn(pBass.notei+24+4+Tonalnost.t, 50);
+                     if (pBass.notei+Tonalnost.t == 31+Tonalnost.t||pBass.notei+Tonalnost.t == 43+Tonalnost.t)
+                        channels[7].noteOn(pBass.notei+24+4+Tonalnost.t, 50);
+            channels[7].noteOff(pBass.notei+24+4+Tonalnost.t);
             }
             else{
-                channels[7].noteOn(pBass.notei+24+3, 20);
-                channels[7].noteOff(pBass.notei+24+3);
+                channels[7].noteOn(pBass.notei+24+3+Tonalnost.t, 50);
+                channels[7].noteOff(pBass.notei+24+3+Tonalnost.t);
             }
             }
             
             //3-я нота
             if (pBass.inter == 5)
             {
-            if (pBass.notei == 35||pBass.notei == 47){
-                channels[7].noteOn(pBass.notei+24+6, 20);
-            channels[7].noteOff(pBass.notei+24+6);
+            if (pBass.notei+Tonalnost.t == 35+Tonalnost.t||pBass.notei+Tonalnost.t == 47+Tonalnost.t){
+                channels[7].noteOn(pBass.notei+24+6+Tonalnost.t, 50);
+            channels[7].noteOff(pBass.notei+24+6+Tonalnost.t);
             }
             else{
-                channels[7].noteOn(pBass.notei+24+7, 20);
-                channels[7].noteOff(pBass.notei+24+7);
+                channels[7].noteOn(pBass.notei+24+7+Tonalnost.t, 50);
+                channels[7].noteOff(pBass.notei+24+7+Tonalnost.t);
             }
             }
                                     
             Thread.sleep(pBass.rytmi); // in milliseconds
                         
-            channels[6].noteOff(pBass.notei);
+            channels[6].noteOff(pBass.notei+Tonalnost.t);
             
-            channels[7].noteOff(pBass.notei+24);                    
+            channels[7].noteOff(pBass.notei+24+Tonalnost.t);                    
          
              m++;
             if(pBass.rytmi==1000){
             if(m==16){
-                if(pBass.notei!=36)
-            pBass.notei =  36; m=0;}
+                if(pBass.notei+Tonalnost.t!=36+Tonalnost.t)
+            pBass.notei =  36+Tonalnost.t; m=0;}
             }else{
              if(m==4){
-                if(pBass.notei!=36)
-            pBass.notei =  36; m=0;}   
+                if(pBass.notei+Tonalnost.t!=36+Tonalnost.t)
+            pBass.notei =  36+Tonalnost.t; m=0;}   
             }
             } 
             

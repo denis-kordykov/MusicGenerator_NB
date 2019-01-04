@@ -18,7 +18,7 @@ int a =0;
      int rytmi= rythm[a +(int)(Math.random() *((b-a)+1))];
      int udari; 
      int note[] = {60,62,64,65,67,69,71,72,74,76,77,79,81,83,84,86,88,89,91,93,95};
-     int notei;
+     static int notei;
      //int i = a +(int)(Math.random() *((bn-a)+1)); масив для баса
      //int[]buffer = new int [i];масив для баса
     
