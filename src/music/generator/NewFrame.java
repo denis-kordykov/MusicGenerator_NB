@@ -90,6 +90,81 @@ import java.awt.event.*;
                           Tonalnost.t = 0;
                         Tonalnost.t = Tonalnost.t+5;                   
                         break; 
+                        case "Фа#(F#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+6;                   
+                        break; 
+                        case "Соль(G)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+7;                   
+                        break;
+                        case "Соль#(G#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+8;                   
+                        break;
+                        case "Ля(A)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+9;                   
+                        break;
+                        case "Ля#(A#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+10;                   
+                        break;
+                        case "Cи(H,B)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+11;                   
+                        break;
+                        
+                        
+                        case "До минор(Сm)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+3;                   
+                        break;
+                        case "До минор#(Сm#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+4;                   
+                        break;
+                        case "Ре минор(Dm)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+5;                   
+                        break;
+                        case "Ре минор#(Dm#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+6;                   
+                        break;
+                        case "Ми минор(Em)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+7;                   
+                        break;
+                        case "Фа минор(Fm)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+8;                   
+                        break;
+                        case "Фа минор# (Fm#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+9;                   
+                        break;
+                        case "Соль минор(Gm)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+10;                   
+                        break;
+                        case "Соль минор# (Gm#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+11;                   
+                        break;
+                        case "Ля минор(Am)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+0;                   
+                        break;
+                        case "Ля минор# (Am#)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+1;                   
+                        break;
+                        case "Cи минор(H,B)":
+                          Tonalnost.t = 0;
+                        Tonalnost.t = Tonalnost.t+2;                   
+                        break;
+                        
                      }
     }    
         });
