@@ -14,7 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class DrumDop {
-    
+    static int volume = 70;
 public static void PlayDop()
  {
      int a =0;
@@ -33,7 +33,7 @@ public static void PlayDop()
                 int start3 = (a +(int)(Math.random())*((b-a)+1));
                 if(start==start2||start==start3){
             for(int u = 0;u<=pDop.udar;u++){            
-            channels[9].noteOn(pDop.ins, 70);
+            channels[9].noteOn(pDop.ins, volume);
             Thread.sleep(pDop.rythm_b); // in milliseconds
             channels[9].noteOff(pDop.ins);pDop.randomD();}
             

@@ -8,6 +8,10 @@ import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
 
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+
 /**
  *
  * @author ƒенис
@@ -56,28 +60,28 @@ import java.awt.event.*;
         
         JButton btn = new JButton("«акрыть");
         
-        JSlider  scrb1 = new JSlider(JSlider.VERTICAL,0,100,70);
+        JSlider  scrb1 = new JSlider(JSlider.VERTICAL,0,100,60);
         scrb1.setMajorTickSpacing(20);
         scrb1.setMinorTickSpacing(5);
         scrb1.setPaintTicks(true);
         scrb1.setSnapToTicks(true);
         scrb1.setPaintLabels(true);
         
-        JSlider  scrb2 = new JSlider(JSlider.VERTICAL,0,100,70);
+        JSlider  scrb2 = new JSlider(JSlider.VERTICAL,0,100,60);
         scrb2.setMajorTickSpacing(20);
         scrb2.setMinorTickSpacing(5);
         scrb2.setPaintTicks(true);
         scrb2.setSnapToTicks(true);
         scrb2.setPaintLabels(true);
         
-        JSlider  scrb3 = new JSlider(JSlider.VERTICAL,0,100,70);
+        JSlider  scrb3 = new JSlider(JSlider.VERTICAL,0,100,80);
         scrb3.setMajorTickSpacing(20);
         scrb3.setMinorTickSpacing(5);
         scrb3.setPaintTicks(true);
         scrb3.setSnapToTicks(true);
         scrb3.setPaintLabels(true);
         
-          JSlider  scrb4 = new JSlider(JSlider.VERTICAL,0,100,70);
+          JSlider  scrb4 = new JSlider(JSlider.VERTICAL,0,100,60);
         scrb4.setMajorTickSpacing(20);
         scrb4.setMinorTickSpacing(5);
         scrb4.setPaintTicks(true);
@@ -116,17 +120,64 @@ import java.awt.event.*;
               
         MyFrame.setVisible(true);
         
-        //scrb1.addAdjustmentListener(new AdjustmentListener(){ 
-          // public void adjustmentValueChanged(AdjustmentEvent e) {
-            // here the control if vertical scroll bar has reached the maximum value
-           // if(!e.getValueIsAdjusting()){
-             //   JScrollBar source = (JScrollBar) e.getAdjustable();
-              //  Piano.volume += source.getModel().getExtent();
-                
-               //  System.out.println(Piano.volume);
-              //   }}
-       // });
-        
+      scrb1.addChangeListener(new ChangeListener(){
+         public void stateChanged(ChangeEvent e)
+			{
+				// ќбновление пол€ редактировани€ при
+				// изменении значени€ регул€тора.
+				JSlider source = (JSlider) e.getSource();
+				Piano.volume = source.getValue();
+                                
+			}
+        });
+      
+      scrb2.addChangeListener(new ChangeListener(){
+         public void stateChanged(ChangeEvent e)
+			{
+				// ќбновление пол€ редактировани€ при
+				// изменении значени€ регул€тора.
+				JSlider source = (JSlider) e.getSource();
+				Guitar.volume = source.getValue();
+                                
+			}
+        });
+      
+      scrb3.addChangeListener(new ChangeListener(){
+         public void stateChanged(ChangeEvent e)
+			{
+				// ќбновление пол€ редактировани€ при
+				// изменении значени€ регул€тора.
+				JSlider source = (JSlider) e.getSource();
+				Bass.volume_b = source.getValue();
+                                
+			}
+        });
+      
+      scrb4.addChangeListener(new ChangeListener(){
+         public void stateChanged(ChangeEvent e)
+			{
+				// ќбновление пол€ редактировани€ при
+				// изменении значени€ регул€тора.
+				JSlider source = (JSlider) e.getSource();
+				Bass.volume_p = source.getValue();
+                                
+			}
+        });
+      
+      scrb5.addChangeListener(new ChangeListener(){
+         public void stateChanged(ChangeEvent e)
+			{
+				// ќбновление пол€ редактировани€ при
+				// изменении значени€ регул€тора.
+				JSlider source = (JSlider) e.getSource();
+				Bochka.volume = source.getValue();
+                                DrumDop.volume = source.getValue();
+                                DrumHat.volume = source.getValue();
+                                DrumShare.volume = source.getValue();
+                                
+			}
+        });
+          
         
         comboBox.addActionListener(new ActionListener(){
          public void actionPerformed(ActionEvent event) { 

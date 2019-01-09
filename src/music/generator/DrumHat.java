@@ -14,6 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class DrumHat {
+    static int volume = 70;
 public static void PlayHat()
  {
  DrumRythmHat pHat = new DrumRythmHat();
@@ -25,7 +26,7 @@ public static void PlayHat()
             
             for(int vremya = 0;vremya < 10;vremya = vremya++)
             {
-            channels[9].noteOn(42, 70);
+            channels[9].noteOn(42, volume);
             Thread.sleep(pHat.rythm_b); // in milliseconds
             channels[9].noteOff(42);
             pHat.randomH();

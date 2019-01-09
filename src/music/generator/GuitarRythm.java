@@ -13,7 +13,7 @@ public class GuitarRythm {
 int a =0;
     int b =5;
     int bn = 20;
-    int udar[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+    int udar[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21};
      int[] rythm = {2000,1000,500,250,125,62};
      int rytmi= rythm[a +(int)(Math.random() *((b-a)+1))];
      int udari; 
@@ -34,7 +34,7 @@ int a =0;
      
                
                rytmi = rythm[a +(int)(Math.random() *((b-a)+1))];
-               udari = udar[0 +(int)(Math.random() *((15-0)+1))];
+               udari = udar[0 +(int)(Math.random() *((20-0)+1))];
      
 
     }    

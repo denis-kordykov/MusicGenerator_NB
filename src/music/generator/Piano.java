@@ -14,7 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class Piano  {
-    static int volume = 0;
+    static int volume = 60;
     public static void PlayPiano(){
         
          PianoRythm pPiano = new PianoRythm();

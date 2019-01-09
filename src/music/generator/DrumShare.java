@@ -14,7 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class DrumShare {
-    //38  
+    static int volume = 70;  
  public static void PlayShare()
  {
  DrumRythmShare pShare = new DrumRythmShare();
@@ -26,7 +26,7 @@ public class DrumShare {
             
             for(int vremya = 0;vremya < 10;vremya = vremya++)
             {
-            channels[9].noteOn(38, 70);
+            channels[9].noteOn(38, volume);
             Thread.sleep(pShare.rythm_b); // in milliseconds
             channels[9].noteOff(38);
             pShare.randomR();

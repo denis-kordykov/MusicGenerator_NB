@@ -16,6 +16,7 @@ import javax.sound.midi.Synthesizer;
 class Bochka 
 {
 int note = 35;
+static int volume = 70;
 
 public static void PlayBochka()
 {
@@ -31,7 +32,7 @@ public static void PlayBochka()
             
             for(int vremya = 0;vremya < 10;vremya = vremya++)
             {
-            channels[9].noteOn(35, 80);
+            channels[9].noteOn(35, volume);
             Thread.sleep(pBochka.rythm_b); // in milliseconds
             channels[9].noteOff(35);
             pBochka.randomR();

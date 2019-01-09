@@ -14,7 +14,8 @@ import javax.sound.midi.Synthesizer;
  * @author Денис
  */
 public class Bass {
-    
+    static int volume_b = 80;
+     static int volume_p = 60;
  public static void PlayBass()
 {
     int m=0;
@@ -33,23 +34,23 @@ public class Bass {
             for(int p = 0;p<=pBass.povti;p++)
             {
             
-            channels[6].noteOn(pBass.notei+Tonalnost.t, 80);
+            channels[6].noteOn(pBass.notei+Tonalnost.t, volume_b);
                        
-            channels[7].noteOn(pBass.notei+12+Tonalnost.t, 60);
+            channels[7].noteOn(pBass.notei+12+Tonalnost.t, volume_p);
             
             //2-я нота
             if (pBass.inter == 4)
             {
             if (pBass.notei+Tonalnost.t == 24+Tonalnost.t||pBass.notei+Tonalnost.t == 36+Tonalnost.t){
-                channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
+                channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, volume_p);
                 if(pBass.notei+Tonalnost.t == 29+Tonalnost.t||pBass.notei+Tonalnost.t == 41+Tonalnost.t)
-                    channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
+                    channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, volume_p);
                      if (pBass.notei+Tonalnost.t == 31+Tonalnost.t||pBass.notei+Tonalnost.t == 43+Tonalnost.t)
-                        channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, 60);
+                        channels[7].noteOn(pBass.notei+12+4+Tonalnost.t, volume_p);
             channels[7].noteOff(pBass.notei+12+4+Tonalnost.t);
             }
             else{
-                channels[7].noteOn(pBass.notei+12+3+Tonalnost.t, 60);
+                channels[7].noteOn(pBass.notei+12+3+Tonalnost.t, volume_p);
                 channels[7].noteOff(pBass.notei+12+3+Tonalnost.t);
             }
             }
@@ -58,11 +59,11 @@ public class Bass {
             if (pBass.inter == 5)
             {
             if (pBass.notei+Tonalnost.t == 35+Tonalnost.t||pBass.notei+Tonalnost.t == 47+Tonalnost.t){
-                channels[7].noteOn(pBass.notei+12+6+Tonalnost.t, 60);
+                channels[7].noteOn(pBass.notei+12+6+Tonalnost.t, volume_p);
             channels[7].noteOff(pBass.notei+12+6+Tonalnost.t);
             }
             else{
-                channels[7].noteOn(pBass.notei+12+7+Tonalnost.t, 60);
+                channels[7].noteOn(pBass.notei+12+7+Tonalnost.t, volume_p);
                 channels[7].noteOff(pBass.notei+12+7+Tonalnost.t);
             }
             }

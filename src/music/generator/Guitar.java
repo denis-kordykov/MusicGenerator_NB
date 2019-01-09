@@ -14,6 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class Guitar {
+    static int volume = 60;
  public static void PlayGuitar(){
         BassRytm interval = new BassRytm();
          GuitarRythm pGuitar = new GuitarRythm();
@@ -29,10 +30,10 @@ public class Guitar {
             for(int p = 0;p<=pGuitar.udari;p++)
             {
             pGuitar.notei = pGuitar.note[pGuitar.a +(int)(Math.random() *((pGuitar.bn-pGuitar.a)+1))];     
-            channels[6].noteOn(pGuitar.notei, 60);
+            channels[6].noteOn(pGuitar.notei+Tonalnost.t, volume);
             
             Thread.sleep(pGuitar.rytmi); // in milliseconds
-            channels[6].noteOff(pGuitar.notei);  
+            channels[6].noteOff(pGuitar.notei+Tonalnost.t);  
             
             
             }
