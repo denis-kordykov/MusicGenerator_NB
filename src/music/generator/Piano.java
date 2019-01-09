@@ -14,7 +14,9 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class Piano  {
+    static int volume = 0;
     public static void PlayPiano(){
+        
          PianoRythm pPiano = new PianoRythm();
         try {
             Synthesizer synth5 = MidiSystem.getSynthesizer();
@@ -28,7 +30,7 @@ public class Piano  {
             for(int p = 0;p<=pPiano.udari;p++)
             {
             pPiano.notei = pPiano.note[pPiano.a +(int)(Math.random() *((pPiano.bn-pPiano.a)+1))];     
-            channels[6].noteOn(pPiano.notei+Tonalnost.t, 60);
+            channels[6].noteOn(pPiano.notei+Tonalnost.t, volume);
             Thread.sleep(pPiano.rytmi); // in milliseconds
             channels[6].noteOff(pPiano.notei+Tonalnost.t);           
             
