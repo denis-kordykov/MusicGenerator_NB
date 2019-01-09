@@ -44,12 +44,16 @@ import java.awt.event.*;
         JComboBox comboBox = new JComboBox(items);
         
         JFrame MyFrame = new JFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)");
-        MyFrame.setBounds(x, y, 700, 320);
+        MyFrame.setBounds(x, y, 800, 320);
+        
         MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MyFrame.setResizable(false);
         ImageIcon icn = new ImageIcon("note.jpg");
-        JLabel lbl = new JLabel(text,icn,JLabel.CENTER);
-        lbl.setBounds(10, 10, 225, 216);
+        JLabel lbl = new JLabel("Piano:                           Guitar:                    Bass:                        Pad:");
+        JLabel lbl1 = new JLabel("Drums:");
+        lbl.setBounds(10, 10, 250, 250);
+        lbl1.setBounds(680, 200, 50, 20);
+        
         JButton btn = new JButton("Закрыть");
         
         JSlider  scrb1 = new JSlider(JSlider.VERTICAL,0,100,70);
@@ -79,25 +83,36 @@ import java.awt.event.*;
         scrb4.setPaintTicks(true);
         scrb4.setSnapToTicks(true);
         scrb4.setPaintLabels(true);
+        
+        JSlider  scrb5 = new JSlider(JSlider.VERTICAL,0,100,70);
+        scrb5.setMajorTickSpacing(20);
+        scrb5.setMinorTickSpacing(5);
+        scrb5.setPaintTicks(true);
+        scrb5.setSnapToTicks(true);
+        scrb5.setPaintLabels(true);
                       
         btn.setBounds(10, 240, 180, 30);
-        comboBox.setBounds(370, 10, 170, 30);
+        comboBox.setBounds(400, 10, 170, 30);
         scrb1.setBounds(200, 50, 170, 150);
         scrb2.setBounds(300, 50, 170, 150);
         scrb3.setBounds(400, 50, 170, 150);
         scrb4.setBounds(500, 50, 170, 150);
+        scrb5.setBounds(600, 50, 170, 150);
+        lbl.setBounds(265, 135, 400, 150);
      
         btn.addActionListener(this);
         
         MyFrame.setLayout(null);
         MyFrame.setVisible(true);
         MyFrame.add(lbl);
+        MyFrame.add(lbl1);
         MyFrame.add(btn);
         MyFrame.add(comboBox);
         MyFrame.add(scrb1);
         MyFrame.add(scrb2);
         MyFrame.add(scrb3);
         MyFrame.add(scrb4);
+        MyFrame.add(scrb5);
               
         MyFrame.setVisible(true);
         

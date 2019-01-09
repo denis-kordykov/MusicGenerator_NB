@@ -24,7 +24,7 @@ public class MusicGenerator {
      */
     public static void main(String[] args) {
         
-        new NewFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)",640,480);
+        new NewFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)",10,10);
                         
         ThreadP potok = new ThreadP();
         Thread Drums = new Thread(potok);
