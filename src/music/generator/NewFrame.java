@@ -7,6 +7,8 @@ package music.generator;
 import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -45,18 +47,23 @@ import javax.swing.event.ChangeListener;
     "Ля минор# (Am#)",
     "Cи минор(H,B)",
 };
+          
         JComboBox comboBox = new JComboBox(items);
         
         JFrame MyFrame = new JFrame("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)");
-        MyFrame.setBounds(x, y, 800, 320);
+        MyFrame.setBounds(x, y, 950, 320);
         
         MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         MyFrame.setResizable(false);
         ImageIcon icn = new ImageIcon("note.jpg");
-        JLabel lbl = new JLabel("Piano:                           Guitar:                    Bass:                        Pad:");
-        JLabel lbl1 = new JLabel("Drums:");
+        JLabel lbl = new JLabel("Piano:                                     Guitar:                                       Bass:");
+        JLabel lbl1 = new JLabel("Pad:                                         Drums:");
+        JToggleButton toggleBtn = new JToggleButton("Piano off");
+        JToggleButton toggleBtng = new JToggleButton("Guitar on");
+        toggleBtn.setBounds(250, 243, 110, 25);
+        toggleBtng.setBounds(377, 243, 110, 25);
         lbl.setBounds(10, 10, 250, 250);
-        lbl1.setBounds(680, 200, 50, 20);
+        lbl1.setBounds(713, 200, 250, 20);
         
         JButton btn = new JButton("Закрыть");
         
@@ -96,12 +103,12 @@ import javax.swing.event.ChangeListener;
         scrb5.setPaintLabels(true);
                       
         btn.setBounds(10, 240, 180, 30);
-        comboBox.setBounds(400, 10, 170, 30);
+        comboBox.setBounds(500, 10, 170, 30);
         scrb1.setBounds(200, 50, 170, 150);
-        scrb2.setBounds(300, 50, 170, 150);
-        scrb3.setBounds(400, 50, 170, 150);
-        scrb4.setBounds(500, 50, 170, 150);
-        scrb5.setBounds(600, 50, 170, 150);
+        scrb2.setBounds(350, 50, 170, 150);
+        scrb3.setBounds(500, 50, 170, 150);
+        scrb4.setBounds(650, 50, 170, 150);
+        scrb5.setBounds(800, 50, 170, 150);
         lbl.setBounds(265, 135, 400, 150);
      
         btn.addActionListener(this);
@@ -117,16 +124,45 @@ import javax.swing.event.ChangeListener;
         MyFrame.add(scrb3);
         MyFrame.add(scrb4);
         MyFrame.add(scrb5);
-              
+        MyFrame.add(toggleBtn);
+        MyFrame.add(toggleBtng);
+        
         MyFrame.setVisible(true);
+        
+        toggleBtn.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            JToggleButton tBtn = (JToggleButton)e.getSource();
+            if (tBtn.isSelected()) {
+            Piano.volume = 0;   
+            } else {
+             Piano.volume = scrb1.getValue();
+            }
+         }
+      });
+        
+        toggleBtng.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            JToggleButton tBtn = (JToggleButton)e.getSource();
+            if (tBtn.isSelected()) {
+                int x = scrb1.getValue();
+                
+                Guitar.volume = x; 
+            } else {
+             
+             Guitar.volume = 0;
+            }
+         }
+      });
         
       scrb1.addChangeListener(new ChangeListener(){
          public void stateChanged(ChangeEvent e)
 			{
+                            
+                            if (!toggleBtn.isSelected()){
 				// Обновление поля редактирования при
 				// изменении значения регулятора.
 				JSlider source = (JSlider) e.getSource();
-				Piano.volume = source.getValue();
+				Piano.volume = source.getValue();}
                                 
 			}
         });
@@ -134,10 +170,11 @@ import javax.swing.event.ChangeListener;
       scrb2.addChangeListener(new ChangeListener(){
          public void stateChanged(ChangeEvent e)
 			{
+                            if (toggleBtng.isSelected()){
 				// Обновление поля редактирования при
 				// изменении значения регулятора.
 				JSlider source = (JSlider) e.getSource();
-				Guitar.volume = source.getValue();
+				Guitar.volume = source.getValue();}
                                 
 			}
         });

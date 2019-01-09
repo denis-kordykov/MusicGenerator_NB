@@ -53,6 +53,7 @@ public class MusicGenerator {
         Dop.start();
         Bass.start();
         Piano.start();
+        Guitar.start();
         
         System.out.println("Генератор музыки 2019, версия 1.0 beta by Kordyukov Denis(Ukraine, Kherson)");
 
@@ -63,7 +64,9 @@ public class MusicGenerator {
         Bass.setPriority(5);
         Piano.setPriority(1);
         Guitar.setPriority(1);
-              
+        
+        System.out.println(Piano.getId());
+        System.out.println(Bass.getId());      
        
         
          

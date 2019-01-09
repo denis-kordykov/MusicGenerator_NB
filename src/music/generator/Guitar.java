@@ -14,7 +14,7 @@ import javax.sound.midi.Synthesizer;
  * @author Δενθρ
  */
 public class Guitar {
-    static int volume = 60;
+    static int volume = 0;
  public static void PlayGuitar(){
         BassRytm interval = new BassRytm();
          GuitarRythm pGuitar = new GuitarRythm();
